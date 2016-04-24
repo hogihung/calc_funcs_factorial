@@ -19,6 +19,7 @@ class CalcFuncTest < Minitest::Test
   end
 
   def test_confirm_valid_answers
+    assert_equal @fact_func.factorial(1), 1
     assert_equal @fact_func.factorial(4), 24
     assert_equal @fact_func.factorial(7), 5040
     assert_equal @fact_func.factorial(9), 362880
