@@ -91,8 +91,8 @@ Expected: nil
 
 
 Some things to keep in mind before you code the solution:
-1.  If the user tries to call factorial on a negative number or zero, display
-    the error message.
+
+1.  If the user tries to call factorial on a negative number or zero, display the error message.
 
 2.  Try to solve this using recursion.
 
