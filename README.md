@@ -38,7 +38,7 @@ Clone this repo:
 ```
 # Change to your favorite location for learning projects
 cd ~/Documents/LEARNING_NOTES/
-xxx
+git clone https://github.com/hogihung/calc_funcs_factorial.git CalcFuncs
 cd CalcFuncs
 ```
 
