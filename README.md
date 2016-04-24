@@ -1,92 +1,99 @@
 # Fail Forward - Build Factorial Method
 
-source:  http://mathworld.wolfram.com/Factorial.html
+This repo has been created as a learning tool.  We will use the Minitest testing
+tool to help us work out a solution to the proposed problem.
 
+For this exercise you have been asked to create a class called CalcFunc which
+will contain functions found in Calculus.  To start, we want to calculate the 
+factorial for a given positive integer.
 
-1.  Change to your favorite project directory
+Let's assume you are not a Computer Science or Math major, and perhaps it has
+been a handful of years since you have actually used or heard of the term factorial.
 
-2.  Create a new directory and change to it, for our factorial project:
-    mkdir factorial
-    cd factorial
+This scenario is not uncommon.  As software developers, we find ourselves needing
+to create solutions.  So when we don't know the answer, what do we do?  We research!
 
-3.  Create a directory for our test file(s):
-    mkdir test
+Visit the following url and read up on factorials:
+  http://mathworld.wolfram.com/Factorial.html
 
-4.  Create a test file for factorial:
-    touch factorial_test.rb
+I have created some tests for you.  If you do not already have the minitest gem
+installed, you will need to install it.
 
-5.  Edit the factorial_test.rb so we have a base file:
-    require 'minitest/autorun'
+Confirm that minitest is installed:
 
-    class FactorialTest < Minitest::Test
-   
-    end
+```
+➜  CalcFuncs git:(master) gem list | grep minitest
+minitest (5.8.4, 5.8.3)
+➜  CalcFuncs git:(master) ✗
+```
 
-    Save the file.
+If you do not see minitest, you can install using:
 
-6.  Ensure that our file was created correctly, and minitest is working type:
-    ruby test/calc_function_test.rb    
+```
+gem install minitest
+```
 
-    You should see output similar to:
+Clone this repo:
 
-    ➜  factorial ruby -Itest test/factorial_test.rb
-    test/factorial_test.rb:1:in `<main>': uninitialized constant Minitest (NameError)
-    ➜  factorial ruby -Itest test/factorial_test.rb
-    Run options: --seed 5015
+```
+# Change to your favorite location for learning projects
+cd ~/Documents/LEARNING_NOTES/
+xxx
+cd CalcFuncs
+```
 
-    # Running:
+Run the tests:
 
+```
+ruby test/calc_function_test.rb
+```
 
+You should see results similar to the following:
 
-    Finished in 0.000920s, 0.0000 runs/s, 0.0000 assertions/s.
-
-    0 runs, 0 assertions, 0 failures, 0 errors, 0 skips
-    ➜  factorial
-
-
-7.  Ok, let's build out our test file like the following:
-
-    xxxx
-
-8.  Run our tests again and we see:
-➜  CalcFuncs clear; ruby test/calc_function_test.rb
-Run options: --seed 700
+```
+➜  CalcFuncs git:(master) ✗ clear; ruby test/calc_function_test.rb
+Run options: --seed 26207
 
 # Running:
 
-EEE
+FFF
 
-Finished in 0.001279s, 2344.9866 runs/s, 0.0000 assertions/s.
+Finished in 0.014925s, 201.0070 runs/s, 201.0070 assertions/s.
 
-  1) Error:
-CalcFuncTest#test_confirm_valid_answers:
-NameError: uninitialized constant CalcFuncTest::CalcFunc
-    test/calc_function_test.rb:7:in `setup'
-
-
-  2) Error:
-CalcFuncTest#test_msg_for_negative_value:
-NameError: uninitialized constant CalcFuncTest::CalcFunc
-    test/calc_function_test.rb:7:in `setup'
-
-
-  3) Error:
-CalcFuncTest#test_msg_for_zero:
-NameError: uninitialized constant CalcFuncTest::CalcFunc
-    test/calc_function_test.rb:7:in `setup'
-
-3 runs, 0 assertions, 0 failures, 3 errors, 0 skips
-➜  CalcFuncs 
-
-9. Update our test/calc_function_test.rb file to include:
-   require 'calc_func'
-
-10. Run the test again.
+  1) Failure:
+CalcFuncTest#test_msg_for_zero [test/calc_function_test.rb:18]:
+--- expected
++++ actual
+@@ -1 +1 @@
+-"Silly Wabbit, can't calculate the factorial of a negative number"
++nil
 
 
 
+  2) Failure:
+CalcFuncTest#test_msg_for_negative_value [test/calc_function_test.rb:13]:
+--- expected
++++ actual
+@@ -1 +1 @@
+-"Silly Wabbit, can't calculate the factorial of a negative number"
++nil
 
 
 
+  3) Failure:
+CalcFuncTest#test_confirm_valid_answers [test/calc_function_test.rb:22]:
+Expected: nil
+  Actual: 24
+
+3 runs, 3 assertions, 3 failures, 0 errors, 0 skips
+➜  CalcFuncs git:(master) ✗
+```
+
+
+Some things to keep in mind before you code the solution:
+1.  If the user tries to call factorial on a negative number or zero, display
+    the error message.
+
+2.  Try to solve this using recursion.
 
 
