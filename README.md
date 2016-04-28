@@ -51,27 +51,27 @@ ruby test/calc_function_test.rb
 You should see results similar to the following:
 
 ```
-➜  CalcFuncs git:(master) ✗ clear; ruby test/calc_function_test.rb
-Run options: --seed 26207
+➜  CalcFuncs git:(master) ruby test/calc_function_test.rb
+Run options: --seed 1911
 
 # Running:
 
 FFF
 
-Finished in 0.014925s, 201.0070 runs/s, 201.0070 assertions/s.
+Finished in 0.013066s, 229.6104 runs/s, 229.6104 assertions/s.
 
   1) Failure:
-CalcFuncTest#test_msg_for_zero [test/calc_function_test.rb:18]:
+CalcFuncTest#test_msg_for_zero [test/calc_function_test.rb:17]:
 --- expected
 +++ actual
 @@ -1 +1 @@
--"Silly Wabbit, can't calculate the factorial of a negative number"
+-"Silly Wabbit, can't calculate the factorial for zero"
 +nil
 
 
 
   2) Failure:
-CalcFuncTest#test_msg_for_negative_value [test/calc_function_test.rb:13]:
+CalcFuncTest#test_msg_for_negative_value [test/calc_function_test.rb:12]:
 --- expected
 +++ actual
 @@ -1 +1 @@
@@ -81,19 +81,17 @@ CalcFuncTest#test_msg_for_negative_value [test/calc_function_test.rb:13]:
 
 
   3) Failure:
-CalcFuncTest#test_confirm_valid_answers [test/calc_function_test.rb:22]:
+CalcFuncTest#test_confirm_valid_answers [test/calc_function_test.rb:21]:
 Expected: nil
-  Actual: 24
+  Actual: 1
 
 3 runs, 3 assertions, 3 failures, 0 errors, 0 skips
-➜  CalcFuncs git:(master) ✗
+➜  CalcFuncs git:(master)
 ```
-
 
 Some things to keep in mind before you code the solution:
 
 1.  If the user tries to call factorial on a negative number or zero, display the error message.
 
 2.  Try to solve this using recursion.
-
 
