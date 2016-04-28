@@ -4,18 +4,17 @@ require './calc_func'
 class CalcFuncTest < Minitest::Test
 
   def setup
-    @error_msg = "Silly Wabbit, can't calculate the factorial of a negative number"
     @fact_func = CalcFunc.new
   end
 
   def test_msg_for_negative_value
     answer = @fact_func.factorial(-4)
-    assert_equal @error_msg, answer
+    assert_equal "Silly Wabbit, can't calculate the factorial of a negative number", answer
   end
 
   def test_msg_for_zero
     answer = @fact_func.factorial(0)
-    assert_equal @error_msg, answer
+    assert_equal "Silly Wabbit, can't calculate the factorial for zero", answer
   end
 
   def test_confirm_valid_answers
