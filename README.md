@@ -1,4 +1,4 @@
-# Fail Forward - Build Factorial Method
+# Build Factorial Method
 
 This repo has been created as a learning tool.  We will use the Minitest testing
 tool to help us work out a solution to the proposed problem.
